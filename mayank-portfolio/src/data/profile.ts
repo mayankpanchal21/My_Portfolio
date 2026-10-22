@@ -6,6 +6,7 @@ export const profile: Profile = {
   email: 'mayankpanchal2002@gmail.com',
   githubUrl: 'https://github.com/mayankpanchal21',
   linkedinUrl: 'https://www.linkedin.com/in/mayank-panchal-6040b1241/',
+  portfolioUrl: 'https://mayankpanchal.vercel.app',
   // PLACEHOLDER: add your PDF to /public/resume/ and set e.g. '/resume/Mayank-Panchal-Resume.pdf'.
   resumeUrl: '',
   availability: {

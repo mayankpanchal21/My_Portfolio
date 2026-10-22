@@ -5,6 +5,7 @@ export interface Profile {
   email: string;
   githubUrl: string;
   linkedinUrl: string;
+  portfolioUrl: string;
   /** Path to a file in /public (e.g. '/resume/Mayank-Panchal-Resume.pdf') or an absolute URL. */
   resumeUrl: string;
   availability: {

@@ -8,8 +8,8 @@ const facts = [
     value: `B.Tech, Computer Science & Engineering · ${education.graduationYear}`,
   },
   { label: "Current role", value: "Lead Engineer · Tamar Software" },
-  { label: "Specialties", value: "Full-stack, GIS, AI-powered products" },
-  { label: "Core stack", value: "MongoDB, Express.js, React, Node.js" },
+  { label: "Specialties", value: "Full-stack Engineer, MERN Stack, AI-powered products" },
+  { label: "Core stack", value: "MongoDB, Express.js, React, Node.js , Tailwind , Next js , Sql , git , Github" },
 ];
 
 export function About() {

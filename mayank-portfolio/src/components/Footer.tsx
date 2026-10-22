@@ -1,4 +1,4 @@
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, User } from 'lucide-react';
 import { navItems, profile } from '../data/profile';
 import { SiteLink } from './ui/SiteLink';
 
@@ -30,6 +30,7 @@ export function Footer() {
           {[
             { href: profile.githubUrl, label: 'GitHub', Icon: Github },
             { href: profile.linkedinUrl, label: 'LinkedIn', Icon: Linkedin },
+            { href: profile.portfolioUrl, label: 'Portfolio', Icon: User },
           ]
             .filter((link) => link.href)
             .map(({ href, label, Icon }) => (
