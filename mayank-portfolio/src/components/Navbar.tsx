@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { navItems, profile } from '../data/profile';
+import { navItems } from '../data/profile';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 import type { NavItem } from '../types';
 import { ResumeLink } from './ui/ResumeLink';
