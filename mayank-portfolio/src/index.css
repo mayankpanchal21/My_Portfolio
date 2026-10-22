@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #09090b;
+    color-scheme: dark;
+    /* Keeps anchored section headings clear of the sticky navbar. */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-ink-950 font-sans text-fg antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(124, 134, 255, 0.35);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #7c86ff;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-fg-subtle;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-700 bg-ink-900/70;
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.03) inset,
+      0 20px 40px -24px rgba(0, 0, 0, 0.6);
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-md border border-ink-700 bg-ink-850 px-2 py-0.5 font-mono text-[11.5px] text-fg-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-fg text-ink-950 hover:bg-white;
+  }
+
+  .btn-secondary {
+    @apply btn border border-ink-600 text-fg hover:border-fg-subtle hover:bg-ink-850;
+  }
+
+  .link-underline {
+    @apply underline decoration-ink-600 underline-offset-4 transition-colors hover:decoration-accent;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .mask-fade-radial {
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
+  }
+}
+
+@keyframes loading-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
+/* Lock page scroll while a modal dialog (the gallery lightbox) is open. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/* Typography for Markdown blog posts (kept local instead of adding @tailwindcss/typography). */
+.prose-post {
+  @apply text-[17px] leading-[1.8] text-fg-muted;
+}
+.prose-post > * + * {
+  @apply mt-5;
+}
+.prose-post h2 {
+  @apply mt-12 text-2xl font-medium tracking-tight text-fg;
+}
+.prose-post h3 {
+  @apply mt-9 text-lg font-medium text-fg;
+}
+.prose-post h2 + *,
+.prose-post h3 + * {
+  @apply mt-3;
+}
+.prose-post strong {
+  @apply font-medium text-fg;
+}
+.prose-post a {
+  @apply text-accent-soft underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent;
+}
+.prose-post ul,
+.prose-post ol {
+  @apply space-y-2 pl-6;
+}
+.prose-post ul {
+  @apply list-disc marker:text-ink-600;
+}
+.prose-post ol {
+  @apply list-decimal marker:font-mono marker:text-sm marker:text-fg-subtle;
+}
+.prose-post blockquote {
+  @apply border-l-2 border-accent/60 pl-5 italic text-fg;
+}
+.prose-post :not(pre) > code {
+  @apply rounded border border-ink-700 bg-ink-850 px-1.5 py-0.5 font-mono text-[0.85em] text-fg;
+}
+.prose-post pre {
+  @apply overflow-x-auto rounded-xl border border-ink-700 bg-ink-900 p-5 font-mono text-[13.5px] leading-relaxed text-fg;
+}
+.prose-post hr {
+  @apply my-12 border-ink-800;
+}
+.prose-post img {
+  @apply rounded-xl border border-ink-700;
+}
+.prose-post table {
+  @apply w-full border-collapse text-left text-[15px];
+}
+.prose-post th,
+.prose-post td {
+  @apply border-b border-ink-700 px-3 py-2;
+}

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mayank Panchal | Software Engineer &amp; Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Explore Mayank Panchal's software engineering experience, full-stack development skills, selected projects, and professional background."
+    />
+    <meta name="author" content="Mayank Panchal" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="color-scheme" content="dark" />
+
+    <!--
+      TODO (before deploying): replace YOUR-DOMAIN with the real site URL and uncomment.
+      Left commented so an unedited deploy doesn't point search engines at a wrong URL.
+      <link rel="canonical" href="https://YOUR-DOMAIN/" />
+      <meta property="og:url" content="https://YOUR-DOMAIN/" />
+      <meta property="og:image" content="https://YOUR-DOMAIN/og-image.png" />
+      <meta name="twitter:image" content="https://YOUR-DOMAIN/og-image.png" />
+    -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mayank Panchal | Software Engineer & Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Explore Mayank Panchal's software engineering experience, full-stack development skills, selected projects, and professional background."
+    />
+    <meta property="og:site_name" content="Mayank Panchal" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mayank Panchal | Software Engineer & Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Software engineering experience, full-stack development skills, and selected projects."
+    />
+
+    <!-- Favicon placeholder: replace public/favicon.svg with a final mark if desired. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Only facts supplied by Mayank are included here. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mayank Panchal",
+        "jobTitle": "Software Engineer",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Dr. A.P.J. Abdul Kalam Technical University, Lucknow"
+        },
+        "sameAs": [
+          "https://github.com/mayankpanchal21",
+          "https://www.linkedin.com/in/mayank-panchal-6040b1241/"
+        ]
+      }
+    </script>
+
+    <!-- Intro screen: styled inline so it paints immediately, before the app bundle loads. -->
+    <style>
+      #intro {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: #09090b;
+        color: #ececef;
+        font-family: Geist, ui-sans-serif, system-ui, sans-serif;
+        transition: opacity 0.5s ease, visibility 0.5s;
+      }
+      #intro::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 56px 56px;
+        mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 20%, transparent 75%);
+        -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 20%, transparent 75%);
+      }
+      #intro.intro-exit { opacity: 0; visibility: hidden; }
+      .intro-inner { position: relative; width: min(100%, 52rem); text-align: center; }
+      .intro-title {
+        margin: 0;
+        font-size: clamp(2.25rem, 8vw, 4.25rem);
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+      .intro-word {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(14px);
+        animation: intro-word 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      .intro-word:nth-child(2) { animation-delay: 0.15s; }
+      .intro-word:nth-child(3) {
+        animation-delay: 0.3s;
+        font-family: 'Instrument Serif', ui-serif, Georgia, serif;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: #a5abff;
+      }
+      .intro-track {
+        position: relative;
+        height: 2px;
+        margin: 40px auto 0;
+        width: min(100%, 18rem);
+        overflow: hidden;
+        border-radius: 2px;
+        background: #232329;
+      }
+      .intro-fill {
+        position: absolute;
+        inset: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        background: #7c86ff;
+        box-shadow: 0 0 12px rgba(124, 134, 255, 0.6);
+      }
+      .intro-meta {
+        display: flex;
+        justify-content: space-between;
+        width: min(100%, 18rem);
+        margin: 12px auto 0;
+        font: 500 11px/1 'Geist Mono', ui-monospace, monospace;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #71717a;
+      }
+      @keyframes intro-word { to { opacity: 1; transform: none; } }
+      @media (prefers-reduced-motion: reduce) {
+        .intro-word { animation-duration: 0.01s; transform: none; }
+      }
+    </style>
+    <noscript><style>#intro { display: none; }</style></noscript>
+  </head>
+  <body>
+    <div id="intro" role="status" aria-label="Loading Mayank Panchal's portfolio">
+      <div class="intro-inner">
+        <p class="intro-title">
+          <span class="intro-word">Engineers</span>
+          <span class="intro-word">build</span>
+          <span class="intro-word">world</span>
+        </p>
+        <div class="intro-track" aria-hidden="true"><div class="intro-fill" id="intro-fill"></div></div>
+        <div class="intro-meta" aria-hidden="true"><span>Loading</span><span id="intro-pct">0%</span></div>
+      </div>
+    </div>
+    <script>
+      // Drives the intro loading bar for INTRO_MS; src/main.tsx mounts the app when it ends.
+      (function () {
+        var INTRO_MS = 3000;
+        var start = performance.now();
+        window.__introEnd = start + INTRO_MS;
+        var fill = document.getElementById('intro-fill');
+        var pct = document.getElementById('intro-pct');
+        var ease = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+        function frame(now) {
+          // Fill over the first 92% of the intro so the bar visibly completes before fading.
+          var t = Math.min(1, (now - start) / (INTRO_MS * 0.92));
+          var p = ease(t);
+          fill.style.transform = 'scaleX(' + p + ')';
+          pct.textContent = Math.round(p * 100) + '%';
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      })();
+    </script>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 24px; font-family: system-ui; color: #ececef; background: #09090b">
+        Mayank Panchal — Software Engineer &amp; Full Stack Developer. Please enable JavaScript to
+        view this portfolio, or reach out at mayankpanchal2002@gmail.com.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
